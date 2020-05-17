@@ -8,6 +8,13 @@
     android:padding="@dimen/layout_default_padding"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="습관 선택"
+        style="@style/title_large"
+        />
+
     <LinearLayout
         android:id="@+id/lin_add"
         android:layout_width="match_parent"
@@ -29,10 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:text="Create New Habit"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:textSize="21sp"
+            android:text="사용자 정의 습관"
+            style="@style/subtitle_middle"
             android:layout_marginLeft="6dp"
             />
     </LinearLayout>
@@ -43,6 +48,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="@dimen/default_top_margin"
+        android:background="@drawable/bg_list"
+        android:padding="@dimen/layout_default_padding"
         android:layout_below="@+id/lin_add"
         android:gravity="center_vertical"
         >
@@ -50,7 +57,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Body"
+            android:text="운동"
             style="@style/title_middle"
             />
 
@@ -64,13 +71,28 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mind"
+            android:text="마음"
             style="@style/title_middle"
             android:layout_marginTop="@dimen/layout_between_top_margin"
             />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_mind"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/layout_between_top_margin"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="예술"
+            style="@style/title_middle"
+            android:layout_marginTop="@dimen/layout_between_top_margin"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_art"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/layout_between_top_margin"

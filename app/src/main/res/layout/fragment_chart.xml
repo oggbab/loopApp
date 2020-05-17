@@ -33,7 +33,9 @@
         app:pcv_mode="ring"
         app:pcv_progressBarThickness="30dp"
         app:pcv_textSize="50sp"
-        app:pcv_backgroundBarColor="#0E0E0E"
+        app:pcv_textColor="@color/colorPrimary"
+        app:pcv_backgroundBarColor="@color/colorPrimary"
+        app:pcv_progressColor="@color/colorAccent"
         app:pcv_backgroundBarThickness="30dp"
         app:pcv_progress="10"
         app:pcv_startAngle="90"/>

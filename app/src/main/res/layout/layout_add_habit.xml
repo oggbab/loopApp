@@ -29,7 +29,6 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="Create New Habit"
-            android:textColor="#000"
             android:textStyle="bold"
             android:textSize="21sp"
             android:layout_marginLeft="6dp"
@@ -74,7 +73,6 @@
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/layout_between_top_margin"
             />
-
     </LinearLayout>
 
 </LinearLayout>

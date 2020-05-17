@@ -19,7 +19,6 @@
             android:id="@+id/tv_mvvm"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="#000"
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="42dp"

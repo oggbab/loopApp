@@ -27,6 +27,6 @@ class HabitAdapter (private val items : ArrayList<String>, private val context: 
 
 class HabitViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     // Holds the TextView that will add each animal to
-    val icon = view.iv_habit_icon
+//    val icon = view.iv_habit_icon
     val title = view.tv_habit_title
 }

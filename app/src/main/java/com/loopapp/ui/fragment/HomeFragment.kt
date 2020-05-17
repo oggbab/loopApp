@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -22,11 +23,10 @@ import java.util.zip.Inflater
 
 class HomeFragment : BaseFragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
     private lateinit var adapter: HabitAdapter
     private lateinit var addHabitView: AddHabitFragment
-    private lateinit var recyclerView : RecyclerView
     private lateinit var btnAdd : LinearLayout
+    private lateinit var rv_list : ArrayList<RecyclerView>
 
     private var habitList = ArrayList<String>()
 
@@ -46,8 +46,14 @@ class HomeFragment : BaseFragment() {
             savedInstanceState: Bundle?
     ): View? {
         var rootView = inflater.inflate(R.layout.fragment_home, container, false)
-
-        recyclerView = rootView.findViewById<RecyclerView>(R.id.recycler_body) as RecyclerView
+        var rv_body = rootView.findViewById<RecyclerView>(R.id.recycler_body)
+        var rv_mind = rootView.findViewById<RecyclerView>(R.id.recycler_mind)
+        var rv_art = rootView.findViewById<RecyclerView>(R.id.recycler_art)
+        rv_list = arrayListOf(
+            rootView.findViewById<RecyclerView>(R.id.recycler_body),
+            rootView.findViewById<RecyclerView>(R.id.recycler_mind),
+            rootView.findViewById<RecyclerView>(R.id.recycler_art)
+        )
         btnAdd = rootView.findViewById(R.id.lin_add) as LinearLayout
         btnAdd.setOnClickListener {
             (activity as MainActivity).replaceFragment(AddHabitFragment.newInstance())
@@ -71,20 +77,23 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setAdapter() {
+
         for (i in 0..10) habitList.add(i,"축구")
-        recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        recyclerView.adapter = HabitAdapter(habitList, activity!!)
+        for (recycler in rv_list) {
+            recycler.let {
+                    it.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+                    it.adapter = HabitAdapter(habitList, activity!!)
+                }
+            }
     }
 
     private fun setViewModel() {
-/*
-                dashboardViewModel =
+/*                dashboardViewModel =
         ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
+        val textView: TextView = findViewById(R.id.text_dashboard)
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
         textView.text = it
-        })
-*/
+        })*/
     }
 
 }

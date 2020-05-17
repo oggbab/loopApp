@@ -2,23 +2,43 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-<!--        <item name="android:background">#000</item>-->
-<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorPrimaryDark">@color/colorBg</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">#fff</item>
     </style>
 
-<!--    text-->
-    <style name="title_middle">
-        <item name="android:textSize">24dp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#fff</item>
-    </style>
-
+<!--    제목-->
     <style name="title_large">
         <item name="android:textSize">32dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#fff</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
+    <style name="title_middle">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <!--    본문-->
+    <style name="subtitle_large">
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="subtitle_middle">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="subtitle_small">
+        <item name="android:textSize">11dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+
+
+
+
+
 </resources>
